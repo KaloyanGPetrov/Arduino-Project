@@ -6,14 +6,20 @@ Servo joint2;
 Servo joint3;
 Servo claw;
 
+const int basePin = 2;
+const int joint1Pin = 4;
+const int joint2Pin = 6;
+const int joint3Pin = 8;
+const int clawPin = 10;
+
 void setup() {
   Serial.begin(9600);
   
-  base.attach(2);
-  joint1.attach(4);
-  joint2.attach(6);
-  joint3.attach(8);
-  claw.attach(10);
+  base.attach(basePin);
+  joint1.attach(joint1Pin);
+  joint2.attach(joint2Pin);
+  joint3.attach(joint3Pin);
+  claw.attach(clawPin);
 
   base.write(90);
   joint1.write(90);
